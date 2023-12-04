@@ -1,11 +1,20 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color:rgb(118, 170, 118);
+
 }
 
-#dyr {
-    cursor: pointer;
+#hoved {
+    text-align: center;
 }
+
+#dyrBilde {
+    height: 500px;
+    object-fit: cover; 
+}
+
