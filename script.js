@@ -7,16 +7,24 @@ function randomAnimal() {
 
 console.log(randomAnimal());
 
-let currentImageIndex = 1;
+let currentImageIndex = 0;
+const totalImages = 10;
+const dyrBilde = document.getElementById('dyrBilde');
+const images = [
+    'hund.png',
+    'katt.png',
+    'panda.png',
+    'krokodille.png',
+    'slange.png',
+    'hare.png',
+    'gorilla.png',
+    'elefant.png',
+    'tiger.png',
+    'hest.png'
+];
 
 function showNextImage() {
-    const dyrBilde = document.getElementById('dyrBilde');
-    currentImageIndex++;
-
-    if (currentImageIndex > 10) {
-        currentImageIndex = 1;
-    }
-
-    const nextImageSrc = `image${currentImageIndex}.jpg`;
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+    const nextImageSrc = `bilder/${images[currentImageIndex]}`;
     dyrBilde.src = nextImageSrc;
 }
